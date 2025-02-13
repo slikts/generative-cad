@@ -1,0 +1,15 @@
+base_diameter = 22
+base_height = 15
+base_thread_diameter = 6
+base_thread_depth = 14
+tab_width = 3
+tab_height = 22
+tab_base_width = 15
+tab_hole_diameter = 5
+tab_spacing = 3
+num_tabs = 3
+cog_outer_diameter = 25.0
+cog_base_height = 8.0
+cog_diameter = 30.0
+cog_teeth = 6
+cog_depth = 5.0
