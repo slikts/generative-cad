@@ -1,7 +1,8 @@
 import cadquery as cq
-from defaults import base_diameter, base_height, base_thread_depth, base_thread_size
 from ocp_vscode import show_object
-from vendor.Thread import thread, threads
+
+from .defaults import base_diameter, base_height, base_thread_depth, base_thread_size
+from .vendor.Thread import thread, threads
 
 
 def make_base(base_diameter, base_height, base_thread_size, base_thread_depth):

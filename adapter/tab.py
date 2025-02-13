@@ -1,6 +1,7 @@
 import cadquery as cq
-from defaults import tab_base_width, tab_height, tab_hole_diameter, tab_width
 from ocp_vscode import show_object
+
+from .defaults import tab_base_width, tab_height, tab_hole_diameter, tab_width
 
 
 def make_tab(tab_width, tab_height, tab_base_width, tab_hole_diameter):

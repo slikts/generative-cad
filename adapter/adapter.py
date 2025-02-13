@@ -1,5 +1,7 @@
-from base import make_base
-from defaults import (
+from ocp_vscode import show_object
+
+from .base import make_base
+from .defaults import (
     add_nut_holder,
     base_diameter,
     base_height,
@@ -12,8 +14,7 @@ from defaults import (
     tab_spacing,
     tab_width,
 )
-from ocp_vscode import show_object
-from tab_assembly import make_tab_assembly
+from .tab_assembly import make_tab_assembly
 
 
 def make_adapter(

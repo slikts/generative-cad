@@ -1,5 +1,7 @@
 import cadquery as cq
-from defaults import (
+from ocp_vscode import show_object
+
+from .defaults import (
     nut_base_height,
     nut_depth,
     nut_diameter,
@@ -7,7 +9,6 @@ from defaults import (
     nut_teeth,
     tab_hole_diameter,
 )
-from ocp_vscode import show_object
 
 
 def make_nut_holder(

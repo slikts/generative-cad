@@ -1,4 +1,6 @@
-from defaults import (
+from ocp_vscode import show_object
+
+from .defaults import (
     add_nut_holder,
     base_height,
     num_tabs,
@@ -13,9 +15,8 @@ from defaults import (
     tab_spacing,
     tab_width,
 )
-from nut_holder import make_nut_holder
-from ocp_vscode import show_object
-from tab import make_tab
+from .nut_holder import make_nut_holder
+from .tab import make_tab
 
 
 def make_tab_assembly(
