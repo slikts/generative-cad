@@ -1,5 +1,6 @@
 from base import make_base
 from defaults import (
+    add_nut_holder,
     base_diameter,
     base_height,
     base_thread_depth,
@@ -26,6 +27,7 @@ def make_adapter(
     tab_hole_diameter,
     tab_spacing,
     num_tabs,
+    nut_holder,
 ):
     base = make_base(
         base_diameter=base_diameter,
@@ -41,6 +43,7 @@ def make_adapter(
         tab_spacing=tab_spacing,
         base_height=base_height,
         num_tabs=num_tabs,
+        add_nut_holder=nut_holder,
     )
     return base.union(tab_assembly)
 
@@ -57,5 +60,6 @@ if __name__ == "__main__":
         tab_hole_diameter=tab_hole_diameter,
         tab_spacing=tab_spacing,
         num_tabs=num_tabs,
+        nut_holder=add_nut_holder,
     )
     show_object(adapter)
