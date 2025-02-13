@@ -2,7 +2,7 @@ bolt_length = 19
 bolt_size = 5  # M5
 
 base_diameter = 22
-base_height = 15
+base_height = 16
 
 tab_base_width = 15
 tab_height = 22
@@ -11,9 +11,8 @@ tab_spacing = tab_width
 tab_hole_diameter = bolt_size
 num_tabs = 3
 
-# TODO
-base_thread_diameter = tab_hole_diameter + 1
-base_thread_depth = base_height - 1
+base_thread_size = "3/8 16"
+base_thread_depth = 15
 
 nut_diameter = 7.7
 nut_outer_diameter = nut_diameter + 4

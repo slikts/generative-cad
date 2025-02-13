@@ -4,7 +4,7 @@ from defaults import (
     base_diameter,
     base_height,
     base_thread_depth,
-    base_thread_diameter,
+    base_thread_size,
     num_tabs,
     tab_base_width,
     tab_height,
@@ -19,7 +19,7 @@ from tab_assembly import make_tab_assembly
 def make_adapter(
     base_diameter,
     base_height,
-    base_thread_diameter,
+    base_thread_size,
     base_thread_depth,
     tab_width,
     tab_height,
@@ -32,7 +32,7 @@ def make_adapter(
     base = make_base(
         base_diameter=base_diameter,
         base_height=base_height,
-        base_thread_diameter=base_thread_diameter,
+        base_thread_size=base_thread_size,
         base_thread_depth=base_thread_depth,
     )
     tab_assembly = make_tab_assembly(
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     adapter = make_adapter(
         base_diameter=base_diameter,
         base_height=base_height,
-        base_thread_diameter=base_thread_diameter,
+        base_thread_size=base_thread_size,
         base_thread_depth=base_thread_depth,
         tab_width=tab_width,
         tab_height=tab_height,
