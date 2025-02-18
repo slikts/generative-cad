@@ -64,3 +64,4 @@ if __name__ == "__main__":
         nut_holder=add_nut_holder,
     )
     show_object(adapter)
+    adapter.export("adapter.stl")

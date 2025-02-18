@@ -1,9 +1,7 @@
 from ocp_vscode import show_object
 
 from .defaults import (
-    add_nut_holder,
     base_height,
-    num_tabs,
     nut_base_height,
     nut_depth,
     nut_diameter,
@@ -54,7 +52,7 @@ def make_tab_assembly(
             assembly = assembly.union(current_tab)
 
     if add_nut_holder:
-        cog = make_nut_holder(
+        holder = make_nut_holder(
             outer_diameter=nut_outer_diameter,
             base_height=nut_base_height,
             nut_diameter=nut_diameter,
@@ -63,16 +61,14 @@ def make_tab_assembly(
             nut_depth=nut_depth,
         )
         # Position the cog holder in front of the first tab's hole
-        cog = cog.rotate((0, 0, 0), (1, 0, 0), 90)
-        cog = cog.rotate((0, 0, 0), (0, 0, 1), 90)
-        cog = cog.translate(
+        holder = holder.translate(
             (
                 start_x - nut_base_height,
                 0,
                 base_height + tab_height - tab_base_width / 2,
             )
         )
-        assembly = assembly.union(cog)
+        assembly = assembly.union(holder)
 
     return assembly
 
@@ -85,7 +81,8 @@ if __name__ == "__main__":
         tab_hole_diameter=tab_hole_diameter,
         tab_spacing=tab_spacing,
         base_height=base_height,
-        num_tabs=num_tabs,
-        add_nut_holder=add_nut_holder,
+        num_tabs=2,
+        add_nut_holder=False,
     )
     show_object(object)
+    object.export("tab_assembly.stl")

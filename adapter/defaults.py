@@ -14,11 +14,11 @@ num_tabs = 3
 base_thread_size = "3/8 16"
 base_thread_depth = 15
 
-nut_diameter = 7.7
+nut_diameter = 8 / 0.866
 nut_outer_diameter = nut_diameter + 4
 nut_teeth = 6
 nut_depth = 3.7
-nut_base_height = (
-    nut_depth + bolt_length - num_tabs * tab_width - (num_tabs - 1) * tab_spacing
+nut_base_height = max(
+    nut_depth, bolt_length - num_tabs * tab_width - (num_tabs - 1) * tab_spacing
 )
 add_nut_holder = True
